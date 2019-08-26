@@ -10,6 +10,22 @@ import {
     COLLAPSIBLE_QUOTA_VIEW_DESCRIPTION,
     STAGE_PROGRESSION_DESCRIPTION
 } from '../resources/descriptions';
+import UU from '../resources/images/UU.png';
+import Github from '../resources/images/GitHub-Mark-64px.png';
+import LinkedIn from '../resources/images/Linkedin-Dark-64px.png'
+import DateRangePickerImg from '../resources/images/DateRangePicker.png';
+import DateRangePickerVid from '../resources/videos/DateRangePicker.mp4';
+import SelfConfigImg from '../resources/images/SelfConfig.png';
+import SelfConfigVid from '../resources/videos/SelfConfig.mp4';
+import OneClickManagerJudgmentImg from '../resources/images/OneClickManagerJudgment.png';
+import OneClickManagerJudgmentVid from '../resources/videos/OneClickManagerJudgment.mp4';
+import SnackbarImg from '../resources/images/Snackbar.png';
+import SnackbarVid from '../resources/videos/Snackbar.mp4';
+import CollapsibleQuotaViewImg from '../resources/images/CollapsibleQuotaView.png';
+import CollapsibleQuotaViewVid from '../resources/videos/CollapsibleQuotaView.mp4';
+import StageProgressionImg from '../resources/images/StageProgression.png';
+import StageProgressionVid from '../resources/videos/StageProgression.mp4';
+
 import WorkDemoContainer from '../components/WorkDemoContainer';
 
 const App = props => {
@@ -26,13 +42,13 @@ const App = props => {
                                 Software Engineer
                             </NameCaption>
                             <SocialsWrapper>
-                                <a href={'https://linkedin.com/in/domas-piragas/'}><img width={32} height={32} src={'src/resources/images/Linkedin-Dark-64px.png'}/></a>
-                                <a href={'https://github.com/domaspiragas'}><img width={32} height={32} src={'src/resources/images/GitHub-Mark-64px.png'}/></a>
+                                <a href={'https://linkedin.com/in/domas-piragas/'}><img width={32} height={32} src={LinkedIn}/></a>
+                                <a href={'https://github.com/domaspiragas'}><img width={32} height={32} src={Github}/></a>
                             </SocialsWrapper>
                         </NameWrapper>
                     </MeSection>
                     <Education>
-                        <img width={'75px'} height={'70px'} src={'src/resources/images/UU.png'} />
+                        <img width={'75px'} height={'70px'} src={UU} />
                         <FlexColumn>
                             <SchoolLabel>
                                 Bachelor of Science in Computer Science
@@ -45,24 +61,24 @@ const App = props => {
                     <Work>
                         <WorkDemoFlexColumn>
                             <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Custom Date Range Picker'} videoSrc={'DateRangePicker'} imgSrc={'DateRangePicker'} descriptionText={DATE_RANGE_PICKER_DESCRIPTION}/>
+                                <WorkDemoContainer title={'Custom Date Range Picker'} videoSrc={DateRangePickerVid} imgSrc={DateRangePickerImg} descriptionText={DATE_RANGE_PICKER_DESCRIPTION}/>
                             </WorkContainerWrapper>
                             <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Sales Forecasting Manager Judgment'} videoSrc={'OneClickManagerJudgment'} imgSrc={'OneClickManagerJudgment'} descriptionText={ONE_CLICK_MANAGER_JUDGMENT_DESCRIPTION}/>
+                                <WorkDemoContainer title={'Sales Forecasting Manager Judgment'} videoSrc={OneClickManagerJudgmentVid} imgSrc={OneClickManagerJudgmentImg} descriptionText={ONE_CLICK_MANAGER_JUDGMENT_DESCRIPTION}/>
                             </WorkContainerWrapper>
                             <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Collapsible Quota Visualization'} videoSrc={'CollapsibleQuotaView'} imgSrc={'CollapsibleQuotaView'} descriptionText={COLLAPSIBLE_QUOTA_VIEW_DESCRIPTION}/>
+                                <WorkDemoContainer title={'Collapsible Quota Visualization'} videoSrc={CollapsibleQuotaViewVid} imgSrc={CollapsibleQuotaViewImg} descriptionText={COLLAPSIBLE_QUOTA_VIEW_DESCRIPTION}/>
                             </WorkContainerWrapper>
                         </WorkDemoFlexColumn>
                         <WorkDemoFlexColumn>
                             <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Custom Grid Self Configuration'} videoSrc={'SelfConfig'} imgSrc={'SelfConfig'} descriptionText={SELF_CONFIG_DESCRIPTION}/>
+                                <WorkDemoContainer title={'Custom Grid Self Configuration'} videoSrc={SelfConfigVid} imgSrc={SelfConfigImg} descriptionText={SELF_CONFIG_DESCRIPTION}/>
                             </WorkContainerWrapper>
                             <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Snackbar Messages'} videoSrc={'Snackbar'} imgSrc={'Snackbar'} descriptionText={SNACKBAR_DESCRIPTION}/>
+                                <WorkDemoContainer title={'Snackbar Messages'} videoSrc={SnackbarVid} imgSrc={SnackbarImg} descriptionText={SNACKBAR_DESCRIPTION}/>
                             </WorkContainerWrapper>
                             <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Stage Progression Waterfall Chart'} videoSrc={'StageProgression'} imgSrc={'StageProgression'} descriptionText={STAGE_PROGRESSION_DESCRIPTION}/>
+                                <WorkDemoContainer title={'Stage Progression Waterfall Chart'} videoSrc={StageProgressionVid} imgSrc={StageProgressionImg} descriptionText={STAGE_PROGRESSION_DESCRIPTION}/>
                             </WorkContainerWrapper>
                         </WorkDemoFlexColumn>
                     </Work>

@@ -17,7 +17,7 @@ export const WorkDemoContainer = ({videoSrc, imgSrc, descriptionText, title}) =>
            </Title>
            <Section>
                 <ExampleImageContainer>
-                    <Image src={`src/resources/images/${imgSrc}.png`} width={384} height={384}/>
+                    <Image src={imgSrc} width={384} height={384}/>
                 </ExampleImageContainer>
                <PreCenter>
                    <Description>
@@ -26,7 +26,7 @@ export const WorkDemoContainer = ({videoSrc, imgSrc, descriptionText, title}) =>
                </PreCenter>
            </Section>
            <Section>
-               <video controls width={'768'} height={'432'} src={`src/resources/videos/${videoSrc}.mp4`}/>
+               <video controls width={'768'} height={'432'} src={videoSrc}/>
            </Section>
        </Container>
    )
