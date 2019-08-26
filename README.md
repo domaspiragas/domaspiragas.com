@@ -1,2 +1,0 @@
-# domaspiragas.com
-Personal Portfolio
