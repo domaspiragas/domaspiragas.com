@@ -89,3 +89,14 @@ boxes is displayed showing more details.
 
 Used in the Predictive Pipeline project at
 InsideSales.com`;
+
+export const ABOUT_DESCRIPTION =
+`The majority of my professional experience has been developing
+a complex React application used by enterprise customers. My role
+was primarily to work with the product, UX, and back-end teams to
+implement UI features. (see demos above)
+I have done some development on Spring Boot micro-services for this
+project.
+
+I enjoy both sides of web development and hope to pursue opportunities
+that will allow me continue growing as a full-stack engineer.`;

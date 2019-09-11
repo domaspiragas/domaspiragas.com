@@ -8,11 +8,13 @@ import {
     ONE_CLICK_MANAGER_JUDGMENT_DESCRIPTION,
     SNACKBAR_DESCRIPTION,
     COLLAPSIBLE_QUOTA_VIEW_DESCRIPTION,
-    STAGE_PROGRESSION_DESCRIPTION
+    STAGE_PROGRESSION_DESCRIPTION,
+    ABOUT_DESCRIPTION
 } from '../resources/descriptions';
 import UU from '../resources/images/UU.png';
 import Github from '../resources/images/GitHub-Mark-64px.png';
 import LinkedIn from '../resources/images/Linkedin-Dark-64px.png'
+import Me from '../resources/images/Me.png';
 import DateRangePickerImg from '../resources/images/DateRangePicker.png';
 import DateRangePickerVid from '../resources/videos/DateRangePicker.mp4';
 import SelfConfigImg from '../resources/images/SelfConfig.png';
@@ -59,29 +61,39 @@ const App = props => {
                         </FlexColumn>
                     </Education>
                     <Work>
-                        <WorkDemoFlexColumn>
-                            <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Custom Date Range Picker'} videoSrc={DateRangePickerVid} imgSrc={DateRangePickerImg} descriptionText={DATE_RANGE_PICKER_DESCRIPTION}/>
-                            </WorkContainerWrapper>
-                            <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Sales Forecasting Manager Judgment'} videoSrc={OneClickManagerJudgmentVid} imgSrc={OneClickManagerJudgmentImg} descriptionText={ONE_CLICK_MANAGER_JUDGMENT_DESCRIPTION}/>
-                            </WorkContainerWrapper>
-                            <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Collapsible Quota Visualization'} videoSrc={CollapsibleQuotaViewVid} imgSrc={CollapsibleQuotaViewImg} descriptionText={COLLAPSIBLE_QUOTA_VIEW_DESCRIPTION}/>
-                            </WorkContainerWrapper>
-                        </WorkDemoFlexColumn>
-                        <WorkDemoFlexColumn>
-                            <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Custom Grid Self Configuration'} videoSrc={SelfConfigVid} imgSrc={SelfConfigImg} descriptionText={SELF_CONFIG_DESCRIPTION}/>
-                            </WorkContainerWrapper>
-                            <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Snackbar Messages'} videoSrc={SnackbarVid} imgSrc={SnackbarImg} descriptionText={SNACKBAR_DESCRIPTION}/>
-                            </WorkContainerWrapper>
-                            <WorkContainerWrapper>
-                                <WorkDemoContainer title={'Stage Progression Waterfall Chart'} videoSrc={StageProgressionVid} imgSrc={StageProgressionImg} descriptionText={STAGE_PROGRESSION_DESCRIPTION}/>
-                            </WorkContainerWrapper>
-                        </WorkDemoFlexColumn>
+                        <WorkDemoGrid>
+                            <WorkDemoFlexColumn>
+                                <WorkContainerWrapper>
+                                    <WorkDemoContainer title={'Custom Date Range Picker'} videoSrc={DateRangePickerVid} imgSrc={DateRangePickerImg} descriptionText={DATE_RANGE_PICKER_DESCRIPTION}/>
+                                </WorkContainerWrapper>
+                                <WorkContainerWrapper>
+                                    <WorkDemoContainer title={'Sales Forecasting Manager Judgment'} videoSrc={OneClickManagerJudgmentVid} imgSrc={OneClickManagerJudgmentImg} descriptionText={ONE_CLICK_MANAGER_JUDGMENT_DESCRIPTION}/>
+                                </WorkContainerWrapper>
+                                <WorkContainerWrapper>
+                                    <WorkDemoContainer title={'Collapsible Quota Visualization'} videoSrc={CollapsibleQuotaViewVid} imgSrc={CollapsibleQuotaViewImg} descriptionText={COLLAPSIBLE_QUOTA_VIEW_DESCRIPTION}/>
+                                </WorkContainerWrapper>
+                            </WorkDemoFlexColumn>
+                            <WorkDemoFlexColumn>
+                                <WorkContainerWrapper>
+                                    <WorkDemoContainer title={'Custom Grid Self Configuration'} videoSrc={SelfConfigVid} imgSrc={SelfConfigImg} descriptionText={SELF_CONFIG_DESCRIPTION}/>
+                                </WorkContainerWrapper>
+                                <WorkContainerWrapper>
+                                    <WorkDemoContainer title={'Snackbar Messages'} videoSrc={SnackbarVid} imgSrc={SnackbarImg} descriptionText={SNACKBAR_DESCRIPTION}/>
+                                </WorkContainerWrapper>
+                                <WorkContainerWrapper>
+                                    <WorkDemoContainer title={'Stage Progression Waterfall Chart'} videoSrc={StageProgressionVid} imgSrc={StageProgressionImg} descriptionText={STAGE_PROGRESSION_DESCRIPTION}/>
+                                </WorkContainerWrapper>
+                            </WorkDemoFlexColumn>
+                        </WorkDemoGrid>
                     </Work>
+                    <Education>
+                        <FlexSpaceWrapper>
+                            <img width={268} height={268} src={Me} />
+                            <Description>
+                                {ABOUT_DESCRIPTION}
+                            </Description>
+                        </FlexSpaceWrapper>
+                    </Education>
                 </FlexColumn>
             </ContentWrapper>
         </>
@@ -105,12 +117,27 @@ const MeSection = styled.div`
   flex-direction: column;
 `;
 
+const FlexSpaceWrapper = styled.div`
+  display: flex;
+`;
+
+const Description = styled.pre`
+  margin: unset;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: .5px;
+  background-color: ${theme.colors.secondary};
+  color: ${theme.colors.secondaryText};
+  padding-left: 8px;
+`;
+
 const Education = styled.div`
   background-color:${theme.colors.secondary};
   display: flex;
   align-items: center;
   justify-content: center;
   height: 300px;
+  min-width: 813px;
 `;
 
 const Work = styled.div`
@@ -118,6 +145,14 @@ const Work = styled.div`
   display: flex;
   justify-content: center;
   padding: 12px 0;
+`;
+
+const WorkDemoGrid = styled.div`
+  display: grid;
+  grid-template-columns: minmax(792px, 1fr) minmax(792px, 1fr);
+    @media (max-width: 1584px) {
+    grid-template-columns: 792px;
+    }
 `;
 
 const WorkDemoFlexColumn = styled.div`
